@@ -10,18 +10,20 @@ function App() {
 
   return (
     <>
-    {number < 32 ?
-    <div className="app">
-      <NthNumber n={number} setResult={setResult} />
-      <Form setNumber={setNumber} />
-      {number > 2 && <Result n={result} />}
-    </div>
-    : 
-    <div className="app_error">
-      <h1 className="app_error_title">Oops! Ese numero es muy grande</h1>
-      <button className="app_error_button" onClick={() => setNumber(0)}>Reiniciar</button>
-    </div>
-}
+      {number < 32 ? (
+        <div className="app">
+          <NthNumber n={number} setResult={setResult} />
+          <Form setNumber={setNumber} />
+          {number > 2 && <Result n={result} />}
+        </div>
+      ) : (
+        <div className="app_error">
+          <h1 className="app_error_title">Oops! Ese numero es muy grande</h1>
+          <button className="app_error_button" onClick={() => setNumber(0)}>
+            Reiniciar
+          </button>
+        </div>
+      )}
     </>
   );
 }

@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Esta aplicación cumple los requisitos de la prueba solicitada. 
 
-Currently, two official plugins are available:
+En los requerimientos se indica que al recibir un numero N, este debe pasar por una serie de operaciones para 
+finalmente ejecutar una formula que corresponde a: 
+serie(n) = 3primo(n) * triangular(n) / fibonacci(n-2) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Operacions
+En el archivo calculator.ts podemos encontras las funciones que se ejecutan cuando se llama a la función calculator
+Una que consigue el numero primo de N, otra el numero fibonacci y por ultimo el numero triangular. 
 
-## Expanding the ESLint configuration
+## Componentes 
+Como se solicitó, se integran tres componentes en el archivo app, uno de ellos solo se renderizará hasta que el numero 
+ingresado sea superior a 2 
+Esto con el propósito de evitar resultados nulos o que por la naturaleza de la función no permitan un resultado mostrable
+Adicional a esto, para evitar problemas de renderizado y consumo excesivo de recursos, se cambia el valor de retorno 
+por un encabezado h1 y un boton para resetear el valor cuando este ha superado la cantidad que se indica como número máximo.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Test
+Por último se incorpora un archivo test que se ejecuta con el comando npm run test, este evalua los numeros naturales 
+para garantizar los resultados esperados. 
+El caso del numero 9 se maneja con el la funcion  toBeCloseTo() debido a que el numero resultante es muy largo, por ello 
+se pide que se acerque, siendo la variación de centésimas. 
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
