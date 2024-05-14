@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  min-width: 320px;
+margin: 0 auto;
+
+}
+
+h1, h2, h3, h4, h5, h6, span, p {
+  margin: 0;
+}
+
+.app{
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ff97a0;  
+  box-shadow:1px 1px 10px #ff97a0;
+  padding: 50px;
+  /* background-color:rgba(154, 157, 169, 0.1); */
+}
+
+.app_error{
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+   min-width: 320px;
+   gap: 20px;
+}
+
+.app_error_title{
+  font-size: 34px;
+  text-align: center;
+}
+.app_error_button{
+  background-color: #E0637C;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 220px;
+  margin: 0 auto;
+
+}
+.form_major{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.title_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+.title_major {
+  font-size: 36px;
+
+}
+
+.title_formula {
+  font-size: 24px;
+  color: #B9B4C7;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #d9d9d9cb;
+  margin-top: 10px;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  max-width: 320px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.input_form{
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 33px;
+  text-align: center;
+}
+
+.button_form  {
+  height: 100%;
+  background-color: #E0637C;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.result_title {
+  font-size: 40px;
+  color: #E0637C;
+  margin-top: 22px;
+}
